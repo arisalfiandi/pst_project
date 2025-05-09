@@ -48,12 +48,12 @@ const Menuitems = [
     icon: IconLogin,
     href: "/authentication/login",
   },
-  {
-    id: uniqueId(),
-    title: "Register",
-    icon: IconUserPlus,
-    href: "/authentication/register",
-  },
+  // {
+  //   id: uniqueId(),
+  //   title: "Register",
+  //   icon: IconUserPlus,
+  //   href: "/authentication/register",
+  // },
   {
     navlabel: true,
     subheader: "Extra",

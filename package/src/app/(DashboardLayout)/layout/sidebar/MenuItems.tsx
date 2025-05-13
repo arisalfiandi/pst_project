@@ -1,11 +1,13 @@
 import {
   IconAperture,
-  IconCopy,
+  IconHistory,
   IconLayoutDashboard,
   IconLogin,
   IconMoodHappy,
   IconTypography,
   IconUserPlus,
+  IconBrandGoogleAnalytics,
+  IconMessages,
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
@@ -21,6 +23,24 @@ const Menuitems = [
     title: "Dashboard",
     icon: IconLayoutDashboard,
     href: "/",
+  },
+  {
+    id: uniqueId(),
+    title: "Riwayat",
+    icon: IconHistory,
+    href: "/riwayat",
+  },
+  {
+    id: uniqueId(),
+    title: "Analisis",
+    icon: IconBrandGoogleAnalytics,
+    href: "/analisis",
+  },
+  {
+    id: uniqueId(),
+    title: "Kritik dan Saran",
+    icon: IconMessages,
+    href: "/kritikdansaran",
   },
   // {
   //   navlabel: true,

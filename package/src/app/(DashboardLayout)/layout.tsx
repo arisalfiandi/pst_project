@@ -1,9 +1,11 @@
 "use client";
-import { styled, Container, Box } from "@mui/material";
+import { styled, Container, Box, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import Header from "@/app/(DashboardLayout)/layout/header/Header";
 import Sidebar from "@/app/(DashboardLayout)/layout/sidebar/Sidebar";
-
+import { useSelector } from "@/store/Store";
+// import { Outlet } from 'react-router-dom';
+import { AppState } from "@/store/Store";
 
 const MainWrapper = styled("div")(() => ({
   display: "flex",
@@ -24,8 +26,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -33,6 +33,9 @@ export default function RootLayout({
 }) {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const customizer = useSelector((state: AppState) => state.customizer);
+
+  const theme = useTheme();
   return (
     <MainWrapper className="mainwrapper">
       {/* ------------------------------------------- */}
@@ -46,7 +49,15 @@ export default function RootLayout({
       {/* ------------------------------------------- */}
       {/* Main Wrapper */}
       {/* ------------------------------------------- */}
-      <PageWrapper className="page-wrapper">
+      <PageWrapper
+        className="page-wrapper"
+        sx={{
+          ...(customizer.isCollapse && {
+            [theme.breakpoints.up("lg")]: {
+              ml: `${customizer.MiniSidebarWidth}px`,
+            },
+          }),
+        }}>
         {/* ------------------------------------------- */}
         {/* Header */}
         {/* ------------------------------------------- */}
@@ -58,8 +69,7 @@ export default function RootLayout({
           sx={{
             paddingTop: "20px",
             maxWidth: "1200px",
-          }}
-        >
+          }}>
           {/* ------------------------------------------- */}
           {/* Page Route */}
           {/* ------------------------------------------- */}

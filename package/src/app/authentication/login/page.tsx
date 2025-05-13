@@ -22,14 +22,12 @@ const Login2 = () => {
             width: "100%",
             opacity: "0.3",
           },
-        }}
-      >
+        }}>
         <Grid
           container
           spacing={0}
           justifyContent="center"
-          sx={{ height: "100vh" }}
-        >
+          sx={{ height: "100vh" }}>
           <Grid
             item
             xs={12}
@@ -38,38 +36,35 @@ const Login2 = () => {
             xl={3}
             display="flex"
             justifyContent="center"
-            alignItems="center"
-          >
+            alignItems="center">
             <Card
               elevation={9}
-              sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
-            >
+              sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}>
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Logo />
+                <Typography variant="h1">PST HALSEL</Typography>
               </Box>
               <AuthLogin
-                subtext={
-                  <Typography
-                    variant="subtitle1"
-                    textAlign="center"
-                    color="textSecondary"
-                    mb={1}
-                  >
-                    Your Social Campaigns
-                  </Typography>
-                }
+                // subtext={
+                //   <Typography
+                //     variant="subtitle1"
+                //     textAlign="center"
+                //     color="textSecondary"
+                //     mb={1}
+                //   >
+                //     Your Social Campaigns
+                //   </Typography>
+                // }
                 subtitle={
                   <Stack
                     direction="row"
                     spacing={1}
                     justifyContent="center"
-                    mt={3}
-                  >
-                    <Typography
+                    mt={3}>
+                    {/* <Typography
                       color="textSecondary"
                       variant="h6"
-                      fontWeight="500"
-                    >
+                      fontWeight="500">
                       New to Modernize?
                     </Typography>
                     <Typography
@@ -79,10 +74,9 @@ const Login2 = () => {
                       sx={{
                         textDecoration: "none",
                         color: "primary.main",
-                      }}
-                    >
+                      }}>
                       Create an account
-                    </Typography>
+                    </Typography> */}
                   </Stack>
                 }
               />

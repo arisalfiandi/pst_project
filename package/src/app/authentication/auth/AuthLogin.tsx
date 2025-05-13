@@ -35,8 +35,7 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
           fontWeight={600}
           component="label"
           htmlFor="username"
-          mb="5px"
-        >
+          mb="5px">
           Username
         </Typography>
         <CustomTextField variant="outlined" fullWidth />
@@ -47,8 +46,7 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
           fontWeight={600}
           component="label"
           htmlFor="password"
-          mb="5px"
-        >
+          mb="5px">
           Password
         </Typography>
         <CustomTextField type="password" variant="outlined" fullWidth />
@@ -57,9 +55,8 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
         justifyContent="space-between"
         direction="row"
         alignItems="center"
-        my={2}
-      >
-        <FormGroup>
+        my={2}>
+        {/* <FormGroup>
           <FormControlLabel
             control={<Checkbox defaultChecked />}
             label="Remeber this Device"
@@ -75,7 +72,7 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
           }}
         >
           Forgot Password ?
-        </Typography>
+        </Typography> */}
       </Stack>
     </Stack>
     <Box>
@@ -86,8 +83,7 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
         fullWidth
         component={Link}
         href="/"
-        type="submit"
-      >
+        type="submit">
         Sign In
       </Button>
     </Box>

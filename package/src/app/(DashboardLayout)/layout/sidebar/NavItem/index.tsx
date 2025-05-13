@@ -6,10 +6,14 @@ import {
   List,
   styled,
   ListItemText,
+  Typography,
   useTheme,
   ListItemButton,
 } from "@mui/material";
 import Link from "next/link";
+import { useSelector } from "@/store/Store";
+import { useTranslation } from "react-i18next";
+import { AppState } from "@/store/Store";
 
 type NavGroup = {
   [x: string]: any;
@@ -30,10 +34,12 @@ interface ItemType {
   pathDirect: string;
 }
 
-const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
+const NavItem = ({ item, level, pathDirect, hideMenu, onClick }: ItemType) => {
+  const customizer = useSelector((state: AppState) => state.customizer);
   const Icon = item.icon;
   const theme = useTheme();
   const itemIcon = <Icon stroke={1.5} size="1.3rem" />;
+  const { t } = useTranslation();
 
   const ListItemStyled = styled(ListItem)(() => ({
     padding: 0,
@@ -44,7 +50,7 @@ const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
       borderRadius: "8px",
       backgroundColor: level > 1 ? "transparent !important" : "inherit",
       color: theme.palette.text.secondary,
-      paddingLeft: "10px",
+      paddingLeft: hideMenu ? "10px" : level > 2 ? `${level * 15}px` : "10px",
       "&:hover": {
         backgroundColor: theme.palette.primary.light,
         color: theme.palette.primary.main,
@@ -69,19 +75,25 @@ const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
           disabled={item.disabled}
           selected={pathDirect === item.href}
           target={item.external ? "_blank" : ""}
-          onClick={onClick}
-        >
+          onClick={onClick}>
           <ListItemIcon
             sx={{
               minWidth: "36px",
               p: "3px 0",
               color: "inherit",
-            }}
-          >
+            }}>
             {itemIcon}
           </ListItemIcon>
           <ListItemText>
-            <>{item.title}</>
+            {hideMenu ? "" : <>{t(`${item?.title}`)}</>}
+            <br />
+            {item?.subtitle ? (
+              <Typography variant="caption">
+                {hideMenu ? "" : item?.subtitle}
+              </Typography>
+            ) : (
+              ""
+            )}
           </ListItemText>
         </ListItemButton>
       </ListItemStyled>

@@ -9,6 +9,7 @@ import {
   MenuItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 
 import { IconListCheck, IconMail, IconUser } from "@tabler/icons-react";
@@ -35,8 +36,7 @@ const Profile = () => {
             color: "primary.main",
           }),
         }}
-        onClick={handleClick2}
-      >
+        onClick={handleClick2}>
         <Avatar
           src="/images/profile/user-1.jpg"
           alt="image"
@@ -61,13 +61,12 @@ const Profile = () => {
           "& .MuiMenu-paper": {
             width: "200px",
           },
-        }}
-      >
-        <MenuItem>
+        }}>
+        <MenuItem sx={{ cursor: "default" }}>
           <ListItemIcon>
             <IconUser width={20} />
           </ListItemIcon>
-          <ListItemText>My Profile</ListItemText>
+          <Typography>Admin</Typography>
         </MenuItem>
         {/* 
         <MenuItem>
@@ -88,8 +87,7 @@ const Profile = () => {
             variant="outlined"
             color="primary"
             component={Link}
-            fullWidth
-          >
+            fullWidth>
             Logout
           </Button>
         </Box>

@@ -2,7 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "@/store/Store";
 import { format } from "date-fns";
-import { Box, Typography, Chip, useTheme, Link, Button } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Chip,
+  useTheme,
+  ThemeProvider,
+  Link,
+  Button,
+} from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { fetchTickets, DeleteTicket } from "@/store/apps/tickets/TicketSlice";
 import { TicketType } from "@/types/apps/ticket";
@@ -100,7 +108,8 @@ const TicketPengunjung = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           No
         </Typography>
       ),
@@ -111,7 +120,8 @@ const TicketPengunjung = () => {
               fontWeight: 900,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.id}
           </Typography>
         </Box>
@@ -129,7 +139,8 @@ const TicketPengunjung = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           Nama
         </Typography>
       ),
@@ -137,10 +148,11 @@ const TicketPengunjung = () => {
         <Box display="flex" alignItems="center" height="100%">
           <Typography
             sx={{
-              fontWeight: 200,
+              fontWeight: 900,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.nama}
           </Typography>
         </Box>
@@ -158,7 +170,8 @@ const TicketPengunjung = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           Asal
         </Typography>
       ),
@@ -166,10 +179,11 @@ const TicketPengunjung = () => {
         <Box display="flex" alignItems="center" height="100%">
           <Typography
             sx={{
-              fontWeight: 200,
+              fontWeight: 900,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.asal}
           </Typography>
         </Box>
@@ -186,9 +200,19 @@ const TicketPengunjung = () => {
   });
 
   return (
-    <DashboardCard title="Daftar Antrian Hari Ini">
+    <DashboardCard title="Daftar Antrian Hari Ini" titlesize={30}>
       <Box mt={4}>
         <DataGrid
+          // sx={{
+          //   bgcolor: "#E6FFFA",
+          //   "& .MuiDataGrid-columnHeaders": {
+          //     backgroundColor: "#E6FFFA !important", // <- tambahkan !important jika perlu
+          //     color: "black",
+          //   },
+          //   "& .MuiDataGrid-columnHeaderTitle": {
+          //     fontWeight: "bold",
+          //   },
+          // }}
           key={gridKey}
           rowHeight={60}
           rows={rows}
@@ -196,7 +220,7 @@ const TicketPengunjung = () => {
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 5,
+                pageSize: 10,
               },
             },
           }}

@@ -2,26 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "@/store/Store";
 import { format } from "date-fns";
-import {
-  Box,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  Typography,
-  TableBody,
-  IconButton,
-  Chip,
-  Stack,
-  Avatar,
-  Tooltip,
-  TextField,
-  Pagination,
-  useTheme,
-  TableContainer,
-  Link,
-  Button,
-} from "@mui/material";
+import { Box, Typography, useTheme, Link, Button } from "@mui/material";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import {
   fetchTickets,
@@ -124,7 +105,8 @@ const Riwayat = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           No
         </Typography>
       ),
@@ -135,7 +117,8 @@ const Riwayat = () => {
               fontWeight: 900,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.id}
           </Typography>
         </Box>
@@ -153,7 +136,8 @@ const Riwayat = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           Nama
         </Typography>
       ),
@@ -164,7 +148,8 @@ const Riwayat = () => {
               fontWeight: 200,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.nama}
           </Typography>
         </Box>
@@ -182,7 +167,8 @@ const Riwayat = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           Asal
         </Typography>
       ),
@@ -193,7 +179,8 @@ const Riwayat = () => {
               fontWeight: 200,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.asal}
           </Typography>
         </Box>
@@ -242,7 +229,8 @@ const Riwayat = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "center",
-          }}>
+          }}
+        >
           Waktu
         </Typography>
       ),
@@ -256,7 +244,8 @@ const Riwayat = () => {
               fontWeight: 200,
               fontSize: "0.875rem !important",
               textAlign: "left",
-            }}>
+            }}
+          >
             {params.row.waktu}
           </Typography>
         </Box>
@@ -272,7 +261,8 @@ const Riwayat = () => {
             fontWeight: 900,
             fontSize: "0.875rem !important",
             textAlign: "right",
-          }}>
+          }}
+        >
           Aksi
         </Typography>
       ),
@@ -287,7 +277,8 @@ const Riwayat = () => {
             sx={{
               fontSize: "0.875rem !important",
               textAlign: "right",
-            }}>
+            }}
+          >
             Lihat
           </Typography>
         </Button>
@@ -357,7 +348,7 @@ const Riwayat = () => {
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 5,
+                pageSize: 10,
               },
             },
           }}

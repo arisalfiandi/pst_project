@@ -102,43 +102,47 @@ const NomorAntrian = () => {
 
   return (
     <DashboardCard
-    // footer={
-    //   <Chart
-    //     options={optionscolumnchart}
-    //     series={seriescolumnchart}
-    //     type="area"
-    //     height={60}
-    //     width={"100%"}
-    //   />
-    // }
+      bgcol="#FEF5E5"
+      // footer={
+      //   <Chart
+      //     options={optionscolumnchart}
+      //     series={seriescolumnchart}
+      //     type="area"
+      //     height={60}
+      //     width={"100%"}
+      //   />
+      // }
     >
       <Grid container spacing={1}>
         {/* column */}
         <Grid item xs={12} sm={12} mb={2}>
           <Typography
             variant="h5"
-            // fontSize={50}
+            fontSize={30}
             fontWeight="1600"
-            textAlign="center">
+            textAlign="center"
+          >
             Nomor Antrian Saat Ini
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} mt={4} mb={6}>
+        <Grid item xs={12} sm={12} mt={8} mb={10}>
           <Typography
             variant="h1"
-            fontSize={80}
+            fontSize={150}
             fontWeight="1600"
-            textAlign="center">
+            textAlign="center"
+          >
             001
           </Typography>
         </Grid>
 
-        <Grid item xs={12} sm={12} mb={2}>
+        <Grid item xs={12} sm={12} my={2}>
           <Typography
             variant="h5"
-            fontSize={20}
+            fontSize={35}
             fontWeight="1600"
-            textAlign="center">
+            textAlign="center"
+          >
             Abi - Dinas Pertanian
           </Typography>
         </Grid>

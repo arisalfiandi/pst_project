@@ -2,11 +2,10 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import { useTheme } from "@mui/material/styles";
 import { Grid, Stack, Typography, Avatar } from "@mui/material";
-import { IconArrowUpLeft } from "@tabler/icons-react";
 
 import DashboardCard from "@/app/(DashboardLayout)/components/shared/DashboardCard";
 
-const NamaAntrian = () => {
+const WaktuEstimasiPengunjung = () => {
   // chart color
   const theme = useTheme();
   const secondary = theme.palette.secondary.main;
@@ -102,49 +101,33 @@ const NamaAntrian = () => {
 
   return (
     <DashboardCard
-    // title="Estimasi Waktu Pelayanan"
-    // footer={
-    //   <Chart
-    //     options={optionscolumnchart}
-    //     series={seriescolumnchart}
-    //     type="area"
-    //     height={60}
-    //     width={"100%"}
-    //   />
-    // }
+    // bgcol="#E6FFFA"
     >
       <Grid container spacing={1}>
         {/* column */}
         <Grid item xs={12} sm={12} mb={2}>
           <Typography
             variant="h5"
-            // fontSize={50}
+            fontSize={30}
             fontWeight="1600"
-            textAlign="center">
+            textAlign="center"
+          >
             Estimasi Waktu Pelayanan
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} mb={2}>
+        <Grid item xs={12} sm={12} mt={2} mb={4}>
           <Typography
             variant="h1"
-            fontSize={30}
+            fontSize={40}
             fontWeight="1600"
-            textAlign="center">
+            textAlign="center"
+          >
             26 Menit
           </Typography>
         </Grid>
-        {/* column */}
-        {/* <Grid item xs={5} sm={5}>
-          <Chart
-            options={optionscolumnchart}
-            series={seriescolumnchart}
-            type="donut"
-            height={150} width={"100%"}
-          />
-        </Grid> */}
       </Grid>
     </DashboardCard>
   );
 };
 
-export default NamaAntrian;
+export default WaktuEstimasiPengunjung;

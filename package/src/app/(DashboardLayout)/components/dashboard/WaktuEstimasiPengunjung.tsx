@@ -118,7 +118,7 @@ const WaktuEstimasiPengunjung = () => {
         <Grid item xs={12} sm={12} mt={2} mb={4}>
           <Typography
             variant="h1"
-            fontSize={40}
+            fontSize={30}
             fontWeight="1600"
             textAlign="center"
           >

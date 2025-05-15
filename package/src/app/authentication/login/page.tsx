@@ -2,8 +2,8 @@
 import Link from "next/link";
 import { Grid, Box, Card, Stack, Typography } from "@mui/material";
 // components
-import PageContainer from "@/app/(DashboardLayout)/components/container/PageContainer";
-import Logo from "@/app/(DashboardLayout)/layout/shared/logo/Logo";
+import PageContainer from "@/app/dashboard/components/container/PageContainer";
+import Logo from "@/app/dashboard/layout/shared/logo/Logo";
 import AuthLogin from "../auth/AuthLogin";
 
 const Login2 = () => {
@@ -22,12 +22,14 @@ const Login2 = () => {
             width: "100%",
             opacity: "0.3",
           },
-        }}>
+        }}
+      >
         <Grid
           container
           spacing={0}
           justifyContent="center"
-          sx={{ height: "100vh" }}>
+          sx={{ height: "100vh" }}
+        >
           <Grid
             item
             xs={12}
@@ -36,10 +38,12 @@ const Login2 = () => {
             xl={3}
             display="flex"
             justifyContent="center"
-            alignItems="center">
+            alignItems="center"
+          >
             <Card
               elevation={9}
-              sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}>
+              sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
+            >
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Logo />
                 <Typography variant="h1">PST HALSEL</Typography>
@@ -60,7 +64,8 @@ const Login2 = () => {
                     direction="row"
                     spacing={1}
                     justifyContent="center"
-                    mt={3}>
+                    mt={3}
+                  >
                     {/* <Typography
                       color="textSecondary"
                       variant="h6"

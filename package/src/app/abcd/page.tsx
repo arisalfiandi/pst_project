@@ -1,10 +1,10 @@
 "use client";
 import { Grid, Box } from "@mui/material";
 // components
-import NomorAntrian from "@/app/(DashboardLayout)/components/dashboard/NomorAntrian";
-import WaktuEstimasiPengunjung from "@/app/(DashboardLayout)/components/dashboard/WaktuEstimasiPengunjung";
-import AsalAntrian from "@/app/(DashboardLayout)/components/dashboard/AsalAntrian";
-import TicketPengunjung from "@/app/(DashboardLayout)/components/dashboard/TicketPengunjung";
+import NomorAntrian from "@/app/dashboard/components/dashboard/NomorAntrian";
+import WaktuEstimasiPengunjung from "@/app/dashboard/components/dashboard/WaktuEstimasiPengunjung";
+import AsalAntrian from "@/app/dashboard/components/dashboard/AsalAntrian";
+import TicketPengunjung from "@/app/dashboard/components/dashboard/TicketPengunjung";
 
 const Dashboard = () => {
   return (

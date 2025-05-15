@@ -15,8 +15,8 @@ import {
   Rating,
 } from "@mui/material";
 // components
-import PageContainer from "@/app/(DashboardLayout)/components/container/PageContainer";
-import Logo from "@/app/(DashboardLayout)/layout/shared/logo/Logo";
+import PageContainer from "@/app/dashboard/components/container/PageContainer";
+import Logo from "@/app/dashboard/layout/shared/logo/Logo";
 import React from "react";
 const kritiksaran = () => {
   const theme = useTheme();

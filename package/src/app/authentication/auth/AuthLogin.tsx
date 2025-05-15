@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 
-import CustomTextField from "@/app/(DashboardLayout)/components/forms/theme-elements/CustomTextField";
+import CustomTextField from "@/app/dashboard/components/forms/theme-elements/CustomTextField";
 
 interface loginType {
   title?: string;
@@ -35,7 +35,8 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
           fontWeight={600}
           component="label"
           htmlFor="username"
-          mb="5px">
+          mb="5px"
+        >
           Username
         </Typography>
         <CustomTextField variant="outlined" fullWidth />
@@ -46,7 +47,8 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
           fontWeight={600}
           component="label"
           htmlFor="password"
-          mb="5px">
+          mb="5px"
+        >
           Password
         </Typography>
         <CustomTextField type="password" variant="outlined" fullWidth />
@@ -55,7 +57,8 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
         justifyContent="space-between"
         direction="row"
         alignItems="center"
-        my={2}>
+        my={2}
+      >
         {/* <FormGroup>
           <FormControlLabel
             control={<Checkbox defaultChecked />}
@@ -83,7 +86,8 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
         fullWidth
         component={Link}
         href="/"
-        type="submit">
+        type="submit"
+      >
         Sign In
       </Button>
     </Box>

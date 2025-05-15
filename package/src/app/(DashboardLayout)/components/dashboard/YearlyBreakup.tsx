@@ -116,7 +116,7 @@ const YearlyBreakup = () => {
       <Grid container spacing={3}>
         {/* column */}
         <Grid item xs={12} sm={12}>
-          <Typography variant="h3" fontWeight="700" mt="-10px">
+          <Typography variant="h3" fontWeight="700">
             26 menit
           </Typography>
           <Stack direction="row" spacing={1} mt={1} alignItems="center">

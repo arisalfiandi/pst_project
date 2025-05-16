@@ -61,7 +61,7 @@ const Footer = () => {
               ))}
             </Grid>
           ))} */}
-          <Grid item xs={6} sm={6} lg={4}>
+          <Grid item xs={6} sm={6} lg={6}>
             <Typography fontSize="17px" fontWeight="600" mb="22px">
               Hubungi Kami
             </Typography>
@@ -143,7 +143,7 @@ const Footer = () => {
               </Typography>
             </Link>
           </Grid>
-          <Grid item xs={6} sm={6} lg={4} textAlign="right">
+          <Grid item xs={6} sm={6} lg={3} textAlign="right">
             <Typography fontSize="17px" fontWeight="600" mb="22px">
               Tentang Kami
             </Typography>
@@ -229,7 +229,7 @@ const Footer = () => {
               </Typography>
             </Link>
           </Grid>
-          <Grid item xs={6} sm={6} lg={4} textAlign="right">
+          <Grid item xs={6} sm={6} lg={3} textAlign="right">
             <Typography fontSize="17px" fontWeight="600" mb="22px">
               Ikuti kami
             </Typography>

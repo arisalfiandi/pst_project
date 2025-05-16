@@ -35,7 +35,7 @@ import user3 from "@/assets/images/profile/user-3.jpg";
 import iconPlay from "@/assets/images/frontend-pages/homepage/icon-play.svg";
 import Image from "next/image";
 
-import heroImg from "@/assets/img/hero.png";
+import heroImg from "@/assets/images/man-with-laptop-analyzing-infographics-diagram-bar-chart-report-flat-vector-illustration-analysis-marketing-project-manager.png";
 
 const Frameworks = [
   {
@@ -159,12 +159,12 @@ const Banner = () => {
           <Grid item xs={12} lg={6} textAlign="center" pb={7}>
             <Image
               src={heroImg}
-              width="517"
+              width="850"
               height="517"
               className={"object-cover"}
               alt="Hero Illustration"
               loading="eager"
-              placeholder="blur"
+              // placeholder="blur"
             />
           </Grid>
         </Grid>

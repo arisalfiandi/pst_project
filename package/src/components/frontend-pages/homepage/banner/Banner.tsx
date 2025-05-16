@@ -3,12 +3,11 @@ import {
   Box,
   Stack,
   Typography,
-  AvatarGroup,
-  Avatar,
   Container,
   Grid,
   Button,
   useTheme,
+  Link,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Tooltip from "@mui/material/Tooltip";
@@ -34,6 +33,9 @@ import user2 from "@/assets/images/profile/user-2.jpg";
 import user3 from "@/assets/images/profile/user-3.jpg";
 
 import iconPlay from "@/assets/images/frontend-pages/homepage/icon-play.svg";
+import Image from "next/image";
+
+import heroImg from "@/assets/img/hero.png";
 
 const Frameworks = [
   {
@@ -77,43 +79,93 @@ const Banner = () => {
   };
 
   return (
-    <Box bgcolor="primary.light" pt={7}>
+    <Box bgcolor="primary.light" py={6}>
       <Container
         sx={{
           maxWidth: "1400px !important",
           position: "relative",
         }}
       >
-        <Grid container spacing={3} justifyContent="center" mb={4}>
-          <Grid item xs={12} lg={7} textAlign="center">
-            <Typography
-              variant="h1"
-              fontWeight={700}
-              lineHeight="1.2"
-              sx={{
-                fontSize: {
-                  xs: "40px",
-                  sm: "56px",
-                },
-              }}
-            >
-              Most powerful &{" "}
+        <Grid container spacing={3} justifyContent="center" mb={4} pb={5}>
+          <Grid item xs={12} lg={6} textAlign="center" alignContent="center">
+            <Stack spacing={3}>
               <Typography
                 variant="h1"
+                fontWeight={700}
+                lineHeight="1.2"
                 sx={{
                   fontSize: {
                     xs: "40px",
                     sm: "56px",
                   },
+                  textAlign: "left",
                 }}
-                fontWeight={700}
-                component="span"
-                color="primary.main"
               >
-                developer friendly
-              </Typography>{" "}
-              dashboard
-            </Typography>
+                Pelayanan Statistik Terpadu{" "}
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontSize: {
+                      xs: "40px",
+                      sm: "56px",
+                    },
+                  }}
+                  fontWeight={700}
+                  component="span"
+                  color="warning.main"
+                >
+                  BPS Halmahera Selatan
+                </Typography>
+              </Typography>
+              <Typography
+                variant="h5"
+                fontWeight={200}
+                lineHeight="1.2"
+                sx={{
+                  textAlign: "left",
+                }}
+              >
+                Selamat datang di Pelayanan Statistik Terpadu BPS Halmahera
+                Selatan. Di website ini Anda dapat menemukan berbagai layanan
+                yang kami sediakan dan informasi kontak yang dapat dihubungi.
+                #MelayaniDenganHati❤️
+              </Typography>
+              <Stack direction="row" spacing={2} py={1}>
+                <Link>
+                  <Button variant="contained" color="warning" href="/daftar">
+                    Ambil Tiket PST
+                  </Button>
+                </Link>
+
+                <Link>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      color: "rgba(71, 77, 81, 0.74)",
+                      borderColor: "rgba(71, 77, 81, 0.74)",
+                      "&:hover": {
+                        backgroundColor: "rgba(137, 142, 145, 0.46)",
+                        borderColor: "rgba(108, 123, 132, 0.61)",
+                      },
+                    }}
+                    href="/antrian-tiket"
+                  >
+                    Lihat Antrian
+                  </Button>
+                </Link>
+              </Stack>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} lg={6} textAlign="center" pb={7}>
+            <Image
+              src={heroImg}
+              width="517"
+              height="517"
+              className={"object-cover"}
+              alt="Hero Illustration"
+              loading="eager"
+              placeholder="blur"
+            />
           </Grid>
         </Grid>
       </Container>

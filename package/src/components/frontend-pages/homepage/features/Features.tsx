@@ -1,9 +1,9 @@
 import { Box, Stack, Typography, Grid, Container } from "@mui/material";
 import FeatureTitle from "./FeatureTitle";
 
-import icon1 from "@/assets/images/svgs/icon-briefcase.svg";
-import FeatureApp from "@/assets/images/frontend-pages/homepage/feature-apps.png";
-import LogoIcon from "@/assets/images/logos/logoIcon.svg";
+import icon1 from "@/assets/images/group2.svg";
+import iconEcon from "@/assets/images/moneybag.svg";
+import iconProd from "@/assets/images/palm-tree.svg";
 import Screen1 from "@/assets/images/frontend-pages/homepage/screen1.png";
 import IconBubble from "@/assets/images/svgs/icon-speech-bubble.svg";
 import IconFav from "@/assets/images/svgs/icon-favorites.svg";
@@ -11,50 +11,62 @@ import Image from "next/image";
 
 const Features = () => {
   return (
-    <Box pt={10} pb={10}>
-      <Container maxWidth="lg">
+    <Box pt={10} pb={7}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          pb: {
+            xs: "30px",
+            lg: "60px",
+          },
+        }}
+      >
         <FeatureTitle />
 
-        <Grid container spacing={3} mt={3}>
+        <Grid container spacing={5} mt={3}>
           <Grid item xs sm={6} lg>
-            <Box mb={3} bgcolor="warning.light" borderRadius="24px">
-              <Box px={4} py="65px">
-                <Stack direction="column" spacing={2} textAlign="center">
-                  <Box textAlign="center">
-                    <Image src={icon1} alt="icon1" width={40} height={40} />
-                  </Box>
-                  <Typography variant="h6" fontWeight={700}>
-                    Light & Dark Color Schemes
-                  </Typography>
-                  <Typography variant="body1">
-                    Choose your preferred visual style effortlessly.
-                  </Typography>
-                </Stack>
-              </Box>
-            </Box>
             <Box
               textAlign="center"
               mb={3}
               bgcolor="secondary.light"
               borderRadius="24px"
             >
-              <Box px={4} py="50px">
+              <Box px={4} py="65px">
                 <Stack direction="column" spacing={2} textAlign="center">
-                  <Typography variant="h6" fontWeight={700}>
-                    12+ Ready to Use Application Designs
+                  <Box textAlign="center">
+                    <Image src={icon1} alt="icon1" width={70} height={70} />
+                  </Box>
+                  <Typography variant="h5" fontWeight={700}>
+                    Statistik Demografi dan Sosial
                   </Typography>
-                  <Typography variant="body1">
-                    {" "}
-                    Instantly deployable designs for your applications.
+                  <Typography variant="body1" fontWeight={400}>
+                    Kependudukan, Tenaga Kerja, Pendidikan, Kesehatan, Pemukiman
+                    dan Perumahan, Konsumsi dan Pendapatan, dll.
                   </Typography>
                 </Stack>
               </Box>
-              <Box height="70px">
-                <Image src={FeatureApp} alt="icon1" width={250} height={70} />
+            </Box>
+          </Grid>
+          <Grid item xs sm={6} lg>
+            <Box mb={3} bgcolor="warning.light" borderRadius="24px">
+              <Box px={4} py="65px">
+                <Stack direction="column" spacing={2} textAlign="center">
+                  <Box textAlign="center">
+                    <Image src={iconEcon} alt="icon1" width={70} height={70} />
+                  </Box>
+                  <Typography variant="h5" fontWeight={700}>
+                    Statistik Ekonomi
+                  </Typography>
+                  <Typography variant="body1" fontWeight={400}>
+                    PDRB, Neraca Ekonomi, Bisnis, Keuangan Pemerintah,
+                    Harga-Harga, Pertanian, Kehutanan, Perikanan, Energi,
+                    Pariwisata dll.
+                  </Typography>
+                </Stack>
               </Box>
             </Box>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             xs={12}
             lg={5}
@@ -103,7 +115,7 @@ const Features = () => {
                 </Box>
               </Box>
             </Box>
-          </Grid>
+          </Grid> */}
           <Grid
             item
             xs
@@ -125,24 +137,20 @@ const Features = () => {
               <Box px={4} py="65px">
                 <Stack direction="column" spacing={2} textAlign="center">
                   <Box textAlign="center">
-                    <Image
-                      src={IconBubble}
-                      alt="icon1"
-                      width={40}
-                      height={40}
-                    />
+                    <Image src={iconProd} alt="icon1" width={70} height={70} />
                   </Box>
-                  <Typography variant="h6" fontWeight={700}>
-                    Code Improvements
+                  <Typography variant="h5" fontWeight={700}>
+                    Statistik Lingkungan Hidup dan Multi-domain
                   </Typography>
-                  <Typography variant="body1">
+                  <Typography variant="body1" fontWeight={400}>
                     {" "}
-                    Benefit from continuous improvements and optimizations.
+                    Lingkungan, Globalisasi, Kewiraswastaan, Gender, Statistik
+                    Regional, dll.
                   </Typography>
                 </Stack>
               </Box>
             </Box>
-            <Box
+            {/* <Box
               textAlign="center"
               mb={3}
               bgcolor="error.light"
@@ -162,7 +170,7 @@ const Features = () => {
                   </Typography>
                 </Stack>
               </Box>
-            </Box>
+            </Box> */}
           </Grid>
         </Grid>
       </Container>

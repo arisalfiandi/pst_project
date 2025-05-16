@@ -52,8 +52,8 @@ const HpHeader = () => {
         }}
       >
         <ToolbarStyled>
-          <Logo img="/images/logos/PST HALSEL5.png" />
-          {lgDown ? (
+          <Logo img="/images/logos/PST_HALSEL5-removebg-preview.png" />
+          {/* {lgDown ? (
             <IconButton
               color="inherit"
               aria-label="menu"
@@ -63,18 +63,22 @@ const HpHeader = () => {
             </IconButton>
           ) : null}
           {lgUp ? (
-            <>
-              {/* <Stack spacing={1} direction="row" alignItems="center">
+            <> */}
+          {/* <Stack spacing={1} direction="row" alignItems="center">
                 <Navigations />
               </Stack> */}
-              <Button color="primary" variant="contained" href="/auth/login">
-                Log In
-              </Button>
-            </>
-          ) : null}
+          <Button
+            color="warning"
+            variant="contained"
+            href="/authentication/login"
+          >
+            Log In
+          </Button>
+          {/* </>
+          ) : null} */}
         </ToolbarStyled>
       </Container>
-      <Drawer
+      {/* <Drawer
         anchor="left"
         open={open}
         variant="temporary"
@@ -88,7 +92,7 @@ const HpHeader = () => {
         }}
       >
         <MobileSidebar />
-      </Drawer>
+      </Drawer> */}
     </AppBarStyled>
   );
 };

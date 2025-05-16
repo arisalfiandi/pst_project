@@ -21,7 +21,7 @@ const HomePage = () => {
       <HpHeader />
       <Banner />
       <Features />
-      <Leadership />
+      {/* <Leadership /> */}
       {/* <PowerfulDozens />
       <Reviews />
       <ExceptionalFeature />
